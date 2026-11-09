@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="112" fill="#07111f"/>
+<rect x="38" y="38" width="436" height="436" rx="88" fill="none" stroke="#168cff" stroke-width="18"/>
+<path d="M130 112h78v114h96V112h78v288h-78V300h-96v100h-78z" fill="#edf5ff"/>
+<path d="M315 112h75v288h-75z" fill="#48c7ff" opacity=".0"/>
+<text x="256" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#48c7ff">LUKE 47AI</text>
+</svg>

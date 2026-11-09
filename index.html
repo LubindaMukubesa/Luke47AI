@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>Luke 47AI</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Luke 47AI">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<meta name="color-scheme" content="dark">
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10243a;--blue:#168cff;--cyan:#48c7ff;--text:#edf5ff;--muted:#91a7bf;--line:#1c3550}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px "Segoe UI",Arial,sans-serif}.topbar{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:#081523}.brand{display:flex;align-items:center;gap:12px;letter-spacing:1.4px}.brand b{font-size:15px}.brand small{display:block;color:var(--muted);font-size:9px;margin-top:4px;letter-spacing:2px}.logo{width:43px;height:43px;border:2px solid var(--blue);border-radius:12px;display:grid;place-items:center;color:white;font-weight:900;font-size:17px;box-shadow:0 0 18px #168cff55}.logo span{color:var(--cyan)}.status{font-size:10px;color:#9fc3df;letter-spacing:1px}.status i{display:inline-block;width:7px;height:7px;background:#3ddc97;border-radius:50%;margin-left:7px}.layout{display:flex;min-height:calc(100vh - 72px)}.sidebar{width:230px;flex-shrink:0;background:#091726;border-right:1px solid var(--line);padding:25px 14px;display:flex;flex-direction:column}.nav-label,.eyebrow{font-size:10px;letter-spacing:2px;color:#5d9bcf;font-weight:700}.nav-label{margin:10px 12px}.nav{border:0;background:transparent;color:#a9bdd1;text-align:left;padding:13px 14px;border-radius:8px;margin:2px 0;cursor:pointer;font-size:17px}.nav span{font-size:13px;margin-left:9px}.nav:hover,.nav.active{background:#102b46;color:#fff}.nav.active{box-shadow:inset 3px 0 var(--blue)}.side-foot{margin-top:auto;padding:20px 12px 0;color:#7ca4c6;font-size:11px;line-height:1.8;letter-spacing:1px}.side-foot span{color:#61778d;letter-spacing:0}main{max-width:1200px;width:100%;padding:38px 5%;margin:0 auto}.page{display:none}.page.show{display:block}.hero{background:linear-gradient(115deg,#0e2843,#0b1a2b 70%);border:1px solid #1b4770;border-radius:18px;padding:38px;display:flex;justify-content:space-between;align-items:center;margin-bottom:35px;overflow:hidden}.hero h1{font-size:42px;line-height:1.08;margin:10px 0}.hero em{font-style:normal;color:var(--cyan)}.muted{color:var(--muted);line-height:1.6}.hero-mark{font-size:68px;font-weight:900;color:#168cff;border:3px solid #168cff;border-radius:25px;padding:20px;transform:rotate(-7deg);text-shadow:0 0 25px #168cff88;box-shadow:0 0 40px #168cff33}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.app-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;text-align:left;color:var(--text);cursor:pointer;min-height:145px}.app-card:hover{border-color:var(--blue);transform:translateY(-2px)}.app-card b{display:block;color:var(--cyan);font-size:24px;margin-bottom:13px}.app-card strong{display:block;font-size:15px;margin-bottom:7px}.app-card span{color:var(--muted);font-size:12px;line-height:1.5}.notice{margin-top:24px;border-left:3px solid var(--blue);background:#0d1b2d;padding:15px 18px;display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.notice b{color:#dcecff}.page-head{margin-bottom:28px}.page-head h1{font-size:34px;margin:8px 0}.page-head p{max-width:650px}label{display:block;color:#bdd0e2;font-size:12px;margin:17px 0 7px}input,textarea{width:100%;background:#0a1929;color:var(--text);border:1px solid #29435e;border-radius:8px;padding:13px;font:14px inherit;outline:none}input:focus,textarea:focus{border-color:var(--blue)}textarea{min-height:115px;resize:vertical;line-height:1.55}.large{min-height:260px}.actions,.tool-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:14px 0}button{font:inherit} .actions button,.tool-actions button,.page>button,.keys button{background:#132941;color:#dcecff;border:1px solid #2a4867;border-radius:8px;padding:10px 15px;cursor:pointer}.actions button:hover,.tool-actions button:hover,.page>button:hover{border-color:var(--blue)}button.primary{background:var(--blue);color:white;border-color:var(--blue);font-weight:700}.calc{max-width:350px;background:var(--panel);border:1px solid var(--line);padding:17px;border-radius:14px}.calc input{font-size:28px;text-align:right;margin-bottom:12px;height:65px}.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.keys button{font-size:18px;padding:17px}.keys .op{color:var(--cyan)}.keys .equals{grid-column:span 4;background:var(--blue);border-color:var(--blue);color:white}.tool-actions button{font-size:12px}@media(max-width:800px){.layout{display:block}.sidebar{width:100%;padding:8px;display:flex;flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.nav-label,.side-foot{display:none}.nav{white-space:nowrap;padding:10px}.nav span{font-size:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:25px 16px}.hero{padding:25px}.hero h1{font-size:32px}.hero-mark{font-size:38px;padding:12px}}@media(max-width:430px){.cards{grid-template-columns:1fr}.hero-mark{display:none}.topbar{padding:0 15px}}
+.editor-toolbar{display:flex;gap:7px;flex-wrap:wrap;background:#10243a;border:1px solid var(--line);padding:9px;border-radius:9px 9px 0 0}.editor-toolbar button,.editor-toolbar select{background:#0a1929;color:#eaf4ff;border:1px solid #29435e;border-radius:6px;padding:7px 12px;cursor:pointer}.document-editor{background:#f7f9fc;color:#172334;min-height:430px;padding:38px 5%;border:1px solid #ccd5df;border-radius:0 0 9px 9px;outline:none;line-height:1.65;font-family:Arial,sans-serif}.document-editor:focus{border-color:var(--blue)}.document-editor h1,.document-editor h2{color:#152c45}.slide-builder{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px}.slide-list{display:flex;flex-direction:column;gap:8px}.slide-thumb{padding:12px;background:#10243a;color:#dcecff;border:1px solid var(--line);border-radius:8px;text-align:left;cursor:pointer}.slide-thumb.active{border-color:var(--blue);background:#12365a}.slide-edit{min-width:0}.slide-preview{aspect-ratio:16/9;max-width:700px;background:linear-gradient(135deg,#102b46,#07111f);border:1px solid #24527a;border-radius:12px;padding:7%;margin-top:20px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}.slide-preview small{color:#55baff;letter-spacing:2px}.slide-preview h2{font-size:clamp(20px,4vw,36px);margin:14px 0}.slide-preview p{color:#d4e5f6;white-space:pre-line;line-height:1.6}@media(max-width:650px){.slide-builder{grid-template-columns:1fr}.slide-list{flex-direction:row;overflow:auto}.slide-thumb{min-width:95px}}@media print{.topbar,.sidebar,.page-head,.slide-list,.slide-edit>label,.slide-edit>input,.slide-edit>textarea,.slide-edit>.actions,main>.page:not(#powerpoint),#powerpoint>.actions{display:none!important}body,main,#powerpoint{background:white!important;color:black!important;padding:0!important}.slide-preview{break-after:page;color:black!important;background:white!important;border:1px solid #aaa!important}.slide-preview h2,.slide-preview p{color:black!important}}
+
+
+input,textarea,select,button{font-family:Arial, sans-serif}
+@media(max-width:430px){.topbar{height:auto;min-height:64px;padding:10px 13px}.brand small{font-size:8px;letter-spacing:1px}.status{font-size:9px}.sidebar{gap:3px}.nav{font-size:15px;padding:10px 11px}.nav span{font-size:11px}.hero h1{font-size:29px}main{padding:20px 13px}.page-head h1{font-size:29px}.app-card{padding:17px;min-height:120px}}
+</style>
+
+<style>
+.brand-logo-art{display:block;width:min(100%,230px);height:auto;object-fit:contain;
+border-radius:18px;margin:10px auto 18px;box-shadow:0 0 28px rgba(0,120,255,.22)}
+</style>
+
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">L<span>47</span></div><div><b>LUKE 47AI</b><small>YOUR ALL-IN-ONE WORKSPACE</small></div></div>
+  <div class="status">OFFLINE-READY <i></i></div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <p class="nav-label">WORKSPACE</p>
+  <button class="nav active" data-page="home">⌂ <span>Dashboard</span></button>
+  <p class="nav-label">MINI APPLICATIONS</p>
+  <button class="nav" data-page="writer">▤ <span>Text & Notes</span></button>
+  <button class="nav" data-page="word">W <span>Word Studio</span></button>
+  <button class="nav" data-page="powerpoint">▥ <span>PowerPoint Studio</span></button>
+  <button class="nav" data-page="assignments">▣ <span>Assignment Planner</span></button>
+  <button class="nav" data-page="presentations">▥ <span>Presentation Builder</span></button>
+  <button class="nav" data-page="table">▦ <span>CSV Table</span></button>
+  <button class="nav" data-page="calculator">＋ <span>Calculator</span></button>
+  <button class="nav" data-page="tools">⚙ <span>Quick Tools</span></button>
+  <div class="side-foot">LUKE 47AI<br><span>Version 0.2 • Starter</span></div>
+</aside>
+<main id="main">
+<section class="page show" id="home">
+  <div class="hero">
+    <img class="brand-logo-art" src="./luke47ai-logo.png" alt="Official Luke 47AI logo"><div><p class="eyebrow">WELCOME TO YOUR WORKSPACE</p><h1>Build something<br><em>extraordinary.</em></h1><p class="muted">Your lightweight productivity suite. Choose a mini-application to get started.</p></div><div class="hero-mark">L47</div></div>
+  <h2>Applications</h2>
+  <div class="cards">
+    <button class="app-card" data-go="writer"><b>▤</b><strong>Text & Notes</strong><span>Write, edit and save notes on this device.</span></button>
+    <button class="app-card" data-go="word"><b>W</b><strong>Word Studio</strong><span>Format documents and export Word-compatible files.</span></button>
+    <button class="app-card" data-go="powerpoint"><b>▥</b><strong>PowerPoint Studio</strong><span>Create slides and export PowerPoint presentations.</span></button>
+    <button class="app-card" data-go="assignments"><b>▣</b><strong>Assignment Planner</strong><span>Organise tasks and build an assignment outline.</span></button>
+    <button class="app-card" data-go="presentations"><b>▥</b><strong>Presentation Builder</strong><span>Create a structured slide-by-slide plan.</span></button>
+    <button class="app-card" data-go="table"><b>▦</b><strong>CSV Table</strong><span>Enter data and export it as a CSV file.</span></button>
+    <button class="app-card" data-go="calculator"><b>＋</b><strong>Calculator</strong><span>Perform everyday calculations.</span></button>
+    <button class="app-card" data-go="tools"><b>⚙</b><strong>Quick Tools</strong><span>Word count, case conversion and text cleanup.</span></button>
+  </div>
+  <div class="notice"><b>Development note</b><span>This is the first working foundation. Advanced DOCX, PPTX and PDF editing/export engines will be added in later releases.</span></div>
+</section>
+<section class="page" id="writer">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 01</p><h1>Text & Notes</h1><p class="muted">A simple writing space. Your text is saved in this browser on this device.</p></div>
+  <label>Document title</label><input id="noteTitle" placeholder="My document">
+  <label>Your text</label><textarea id="noteText" class="large" placeholder="Start writing here..."></textarea>
+  <div class="actions"><button class="primary" id="saveNote">Save note</button><button id="downloadTxt">Download .txt</button><span id="noteStatus" class="muted"></span></div>
+</section>
+
+<section class="page" id="word">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 07</p><h1>Word Studio</h1><p class="muted">Write and format documents, then export a Word-compatible file. DOCX export uses an online library when internet is available.</p></div>
+  <label>Document title</label><input id="wordTitle" placeholder="Untitled document">
+  <div class="editor-toolbar">
+    <button data-format="bold"><b>B</b></button><button data-format="italic"><i>I</i></button><button data-format="underline"><u>U</u></button>
+    <button data-format="insertUnorderedList">• List</button><button data-format="insertOrderedList">1. List</button>
+    <select id="wordSize" aria-label="Text size"><option value="3">Normal</option><option value="4">Large</option><option value="5">Heading</option><option value="6">Title</option></select>
+  </div>
+  <div id="wordEditor" class="document-editor" contenteditable="true" spellcheck="true"><h2>Start your document</h2><p>Type your content here...</p></div>
+  <div class="actions"><button class="primary" id="exportDocx">Export DOCX</button><button id="exportDoc">Export Word-compatible DOC</button><button id="saveWord">Save draft</button><span id="wordStatus" class="muted"></span></div>
+</section>
+<section class="page" id="powerpoint">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 08</p><h1>PowerPoint Studio</h1><p class="muted">Build a simple slide deck. Add slides, edit titles and bullet points, and export a PPTX file when online.</p></div>
+  <label>Presentation title</label><input id="pptTitle" placeholder="My presentation">
+  <div class="slide-builder">
+    <div class="slide-list" id="slideList"></div>
+    <div class="slide-edit">
+      <label>Slide title</label><input id="slideHeading" placeholder="Slide title">
+      <label>Slide content (one bullet per line)</label><textarea id="slideBody" class="large" placeholder="First key point&#10;Second key point"></textarea>
+      <div class="actions"><button class="primary" id="addSlide">+ Add slide</button><button id="deleteSlide">Delete slide</button><button id="updateSlide">Update slide</button></div>
+      <div class="slide-preview" id="slidePreview"><small>LUKE 47AI PRESENTATION</small><h2>Your slide preview</h2><p>Slide content will appear here.</p></div>
+    </div>
+  </div>
+  <div class="actions"><button class="primary" id="exportPptx">Export PowerPoint (.pptx)</button><button id="exportPptPdf" onclick="window.print()">Print / Save as PDF</button><span id="pptStatus" class="muted"></span></div>
+</section>
+<section class="page" id="assignments">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 02</p><h1>Assignment Planner</h1><p class="muted">Turn a topic into a useful starting outline. Review and develop the work in your own words.</p></div>
+  <label>Assignment topic</label><input id="assTopic" placeholder="e.g. The role of accounting in business">
+  <label>Course / subject</label><input id="assCourse" placeholder="e.g. Principles of Accounting">
+  <label>Instructions or key points (optional)</label><textarea id="assPoints" placeholder="Paste your lecturer's instructions or key points..."></textarea>
+  <button class="primary" id="makeOutline">Create outline</button>
+  <label>Suggested structure</label><textarea id="assOutput" class="large" placeholder="Your outline will appear here..."></textarea>
+  <button id="downloadOutline">Download outline</button>
+</section>
+<section class="page" id="presentations">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 03</p><h1>Presentation Builder</h1><p class="muted">Generate a slide structure you can transfer into PowerPoint or another presentation app.</p></div>
+  <label>Presentation topic</label><input id="presTopic" placeholder="Enter presentation topic">
+  <label>Number of slides</label><input id="slideCount" type="number" min="3" max="20" value="7">
+  <button class="primary" id="makeSlides">Build slide outline</button>
+  <label>Slide plan</label><textarea id="presOutput" class="large" placeholder="Your slide plan will appear here..."></textarea>
+  <button id="downloadSlides">Download slide plan</button>
+</section>
+<section class="page" id="table">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 04</p><h1>CSV Table</h1><p class="muted">Enter comma-separated values, one row per line, then export your data.</p></div>
+  <label>Table data</label><textarea id="csvInput" class="large" placeholder="Name,Course,Score&#10;Mary,Accounting,85&#10;John,ICT,78"></textarea>
+  <div class="actions"><button class="primary" id="exportCsv">Export CSV</button><button id="sampleCsv">Load sample</button></div>
+  <p class="muted">Tip: Put column headings in the first row. Separate each value with a comma.</p>
+</section>
+<section class="page" id="calculator">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 05</p><h1>Calculator</h1></div>
+  <div class="calc"><input id="calcDisplay" aria-label="Calculator display" placeholder="0" readonly><div class="keys">
+  <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button class="op" data-key="/">÷</button>
+  <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button><button class="op" data-key="*">×</button>
+  <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button class="op" data-key="-">−</button>
+  <button data-key="0">0</button><button data-key=".">.</button><button data-key="clear">C</button><button class="op" data-key="+">+</button>
+  <button class="equals" data-key="=">=</button></div></div>
+</section>
+<section class="page" id="tools">
+  <div class="page-head"><p class="eyebrow">MINI APPLICATION 06</p><h1>Quick Tools</h1><p class="muted">Useful text utilities for everyday work.</p></div>
+  <label>Enter or paste text</label><textarea id="quickText" class="large" placeholder="Type or paste text here..."></textarea>
+  <div class="tool-actions"><button id="wordCount">Count words</button><button id="upper">UPPERCASE</button><button id="lower">lowercase</button><button id="titleCase">Title Case</button><button id="cleanSpaces">Clean spaces</button><button id="copyText">Copy text</button></div>
+  <p id="quickResult" class="muted"></p>
+</section>
+</main>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+function showPage(name){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('show',p.id===name));document.querySelectorAll('.nav').forEach(b=>b.classList.toggle('active',b.dataset.page===name));window.scrollTo(0,0)}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
+function download(name,content,type='text/plain'){const a=document.createElement('a');const u=URL.createObjectURL(new Blob([content],{type}));a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}
+$('saveNote').onclick=()=>{localStorage.setItem('l47_note_title',$('noteTitle').value);localStorage.setItem('l47_note_text',$('noteText').value);$('noteStatus').textContent='Saved on this device.'};
+$('noteTitle').value=localStorage.getItem('l47_note_title')||'';$('noteText').value=localStorage.getItem('l47_note_text')||'';
+$('downloadTxt').onclick=()=>download(($('noteTitle').value||'Luke47AI-note')+'.txt',$('noteText').value);
+$('makeOutline').onclick=()=>{let t=$('assTopic').value.trim()||'Your assignment topic',c=$('assCourse').value.trim()||'Your course',p=$('assPoints').value.trim();$('assOutput').value=`ASSIGNMENT OUTLINE\nTopic: ${t}\nCourse: ${c}\n\n1. INTRODUCTION\n- Introduce the topic and provide background.\n- Explain the purpose and scope of the assignment.\n- State the main argument or objectives.\n\n2. MAIN BODY\n- Define important terms and concepts.\n- Discuss the key issues related to the topic.\n- Use relevant examples, evidence and references.\n- Analyse the evidence and explain its significance.\n\n3. DISCUSSION\n- Compare different viewpoints where relevant.\n- Explain practical applications or implications.\n\n4. CONCLUSION\n- Summarise the main points.\n- Return to the assignment objectives.\n- Give a clear concluding statement.\n\n5. REFERENCES\n- List all sources using the referencing style required by your lecturer.\n\nLECTURER'S INSTRUCTIONS / NOTES\n${p||'Add your specific instructions here.'}\n\nReminder: Develop each section using your own research and words.`};
+$('downloadOutline').onclick=()=>download('Luke47AI-assignment-outline.txt',$('assOutput').value);
+$('makeSlides').onclick=()=>{let t=$('presTopic').value.trim()||'Your presentation topic',n=Math.max(3,Math.min(20,Number($('slideCount').value)||7)),a=[];for(let i=1;i<=n;i++){let title=i===1?'Title and presenter':i===2?'Introduction and objectives':i===n?'Conclusion and questions':i===n-1?'Recommendations / key takeaways':`Main point ${i-2}`;a.push(`SLIDE ${i}: ${title}\n- Add concise points about ${t}.\n- Include supporting facts, examples or visuals.`)}$('presOutput').value=`PRESENTATION PLAN: ${t}\n\n${a.join('\n\n')}\n\nDESIGN TIP: Use readable fonts, consistent colours and limited text per slide.`};
+$('downloadSlides').onclick=()=>download('Luke47AI-presentation-plan.txt',$('presOutput').value);
+$('sampleCsv').onclick=()=>{$('csvInput').value='Name,Course,Score\nMary,Accounting,85\nJohn,ICT,78'};
+$('exportCsv').onclick=()=>download('Luke47AI-table.csv',$('csvInput').value,'text/csv;charset=utf-8');
+let expr='';const display=$('calcDisplay');document.querySelectorAll('[data-key]').forEach(b=>b.onclick=()=>{let k=b.dataset.key;if(k==='clear')expr='';else if(k==='='){try{if(!/^[0-9+*/(). -]+$/.test(expr))throw 0;let result=Function('"use strict";return ('+expr+')')();expr=Number.isFinite(result)?String(result):'Error'}catch{expr='Error'}}else{if(expr==='Error')expr='';expr+=k}display.value=expr||'0'});
+$('wordCount').onclick=()=>{let s=$('quickText').value.trim();$('quickResult').textContent=`Words: ${s?s.split(/\s+/).length:0} • Characters: ${$('quickText').value.length}`};
+$('upper').onclick=()=>{$('quickText').value=$('quickText').value.toUpperCase()};
+$('lower').onclick=()=>{$('quickText').value=$('quickText').value.toLowerCase()};
+$('titleCase').onclick=()=>{$('quickText').value=$('quickText').value.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())};
+$('cleanSpaces').onclick=()=>{$('quickText').value=$('quickText').value.replace(/[ \t]+/g,' ').replace(/ *\n */g,'\n').trim()};
+$('copyText').onclick=async()=>{try{await navigator.clipboard.writeText($('quickText').value);$('quickResult').textContent='Copied to clipboard.'}catch{$('quickResult').textContent='Clipboard access is unavailable in this browser.'}};
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+
+// Word Studio
+document.querySelectorAll('[data-format]').forEach(b=>b.addEventListener('click',()=>{document.execCommand(b.dataset.format,false,null);$('wordEditor').focus()}));
+$('wordSize').onchange=()=>{document.execCommand('formatBlock',false,$('wordSize').value==='6'?'H1':$('wordSize').value==='5'?'H2':$('wordSize').value==='4'?'H3':'P');$('wordEditor').focus()};
+$('saveWord').onclick=()=>{localStorage.setItem('l47_word_title',$('wordTitle').value);localStorage.setItem('l47_word_html',$('wordEditor').innerHTML);$('wordStatus').textContent='Draft saved on this device.'};
+$('wordTitle').value=localStorage.getItem('l47_word_title')||'';
+if(localStorage.getItem('l47_word_html'))$('wordEditor').innerHTML=localStorage.getItem('l47_word_html');
+$('exportDoc').onclick=()=>{let title=$('wordTitle').value||'Luke 47AI Document';let content=`<!doctype html><html><head><meta charset="utf-8"><title>${title}</title></head><body>${$('wordEditor').innerHTML}</body></html>`;download((title.replace(/[^\w-]+/g,'_')||'document')+'.doc',content,'application/msword')};
+async function loadScript(url){return new Promise((resolve,reject)=>{let s=document.createElement('script');s.src=url;s.onload=resolve;s.onerror=reject;document.head.appendChild(s)})}
+$('exportDocx').onclick=async()=>{try{if(!window.docx)await loadScript('https://unpkg.com/docx@8.5.0/build/index.umd.js');let d=window.docx;let title=$('wordTitle').value||'Luke 47AI Document';let plain=$('wordEditor').innerText.split('\n');let children=plain.map((line,i)=>new d.Paragraph({children:[new d.TextRun({text:line,breakLine:false})],spacing:{after:160}}));let doc=new d.Document({sections:[{properties:{},children}]});let blob=await d.Packer.toBlob(doc);let a=document.createElement('a');let u=URL.createObjectURL(blob);a.href=u;a.download=(title.replace(/[^\w-]+/g,'_')||'document')+'.docx';a.click();URL.revokeObjectURL(u);$('wordStatus').textContent='DOCX exported.'}catch(e){$('wordStatus').textContent='DOCX export needs an internet connection. Try the Word-compatible DOC export.'}};
+// PowerPoint Studio
+let slides=[{title:'Welcome',body:'Introduce your presentation topic\nState the purpose'}],activeSlide=0;
+function renderSlideList(){let list=$('slideList');list.innerHTML='';slides.forEach((s,i)=>{let b=document.createElement('button');b.className='slide-thumb'+(i===activeSlide?' active':'');b.textContent=`${i+1}. ${s.title||'Untitled slide'}`;b.onclick=()=>selectSlide(i);list.appendChild(b)});renderSlidePreview()}
+function selectSlide(i){activeSlide=i;$('slideHeading').value=slides[i].title;$('slideBody').value=slides[i].body;renderSlideList()}
+function renderSlidePreview(){let s=slides[activeSlide];$('slidePreview').innerHTML=`<small>LUKE 47AI PRESENTATION • SLIDE ${activeSlide+1}</small><h2></h2><p></p>`;$('slidePreview').querySelector('h2').textContent=s.title||'Untitled slide';$('slidePreview').querySelector('p').textContent=s.body||''}
+$('slideHeading').value=slides[0].title;$('slideBody').value=slides[0].body;renderSlideList();
+$('addSlide').onclick=()=>{slides.push({title:'New slide',body:'Add your key points here'});selectSlide(slides.length-1)};
+$('deleteSlide').onclick=()=>{if(slides.length===1){slides[0]={title:'',body:''}}else{slides.splice(activeSlide,1);activeSlide=Math.max(0,activeSlide-1)}selectSlide(activeSlide)};
+$('updateSlide').onclick=()=>{slides[activeSlide]={title:$('slideHeading').value,body:$('slideBody').value};renderSlideList()};
+$('exportPptx').onclick=async()=>{try{if(!window.PptxGenJS)await loadScript('https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js');let pptx=new window.PptxGenJS();pptx.layout='LAYOUT_WIDE';pptx.author='Luke 47AI';pptx.subject='Presentation';pptx.title=$('pptTitle').value||'Luke 47AI Presentation';slides.forEach((s,i)=>{let sl=pptx.addSlide();sl.background={color:'07111F'};sl.addText('LUKE 47AI  •  '+String(i+1).padStart(2,'0'),{x:.6,y:.45,w:8,h:.3,fontFace:'Aptos',fontSize:10,bold:true,color:'48C7FF',charSpacing:2});sl.addText(s.title||'Untitled slide',{x:.7,y:1.35,w:11.2,h:1.1,fontFace:'Aptos Display',fontSize:30,bold:true,color:'FFFFFF',breakLine:false});let bullets=(s.body||'').split('\n').filter(x=>x.trim()).map(x=>({text:x,options:{bullet:{indent:18},breakLine:true}}));sl.addText(bullets,{x:1,y:2.8,w:10.5,h:3.4,fontFace:'Aptos',fontSize:20,color:'D4E5F6',paraSpaceAfterPt:15,breakLine:false});sl.addText('LUKE 47AI',{x:.7,y:6.95,w:4,h:.25,fontSize:9,color:'6E91B2'})});await pptx.writeFile({fileName:(($('pptTitle').value||'Luke47AI-Presentation').replace(/[^\w-]+/g,'_'))+'.pptx'});$('pptStatus').textContent='PowerPoint file exported.'}catch(e){$('pptStatus').textContent='PPTX export needs an internet connection. You can use Print / Save as PDF as an alternative.'}};
+
+</script>
+</body></html>

@@ -1,0 +1,18 @@
+{
+  "name": "Luke 47AI",
+  "short_name": "Luke 47AI",
+  "description": "Luke 47AI \u2014 Intelligence Without Limits. A lightweight productivity suite.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "icons": [
+    {
+      "src": "./luke47ai-logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
